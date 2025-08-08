@@ -1,4 +1,4 @@
-import { MoviesProps } from "@/interfaces/Index";
+import { MoviesProps } from "@/interfaces/index";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(

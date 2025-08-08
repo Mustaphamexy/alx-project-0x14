@@ -1,4 +1,4 @@
-import { MovieProps } from "@/interfaces/Index";
+import { MovieProps } from "@/interfaces/index";
 
 const MovieCard: React.FC<MovieProps> = ({ title, posterImage, releaseYear}) => {
     return (
