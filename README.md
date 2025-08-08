@@ -55,13 +55,15 @@ The **MoviesDatabase API** provides complete and up-to-date information for over
 **Example Request:**
 ```http
 GET /titles?limit=5&year=2023&genre=Action HTTP/1.1
-Host: moviesdatabase.p.rapidapi.com
+Host: moviesdatabase.p.rapidapi.com ```
+
+---
 
 ## Authentication
 - The API uses API Key authentication via RapidAPI.
 - Include the following headers in every request:
--- X-RapidAPI-Key: YOUR_API_KEY
---X-RapidAPI-Host: moviesdatabase.p.rapidapi.com
+ ```X-RapidAPI-Key: YOUR_API_KEY
+-X-RapidAPI-Host: moviesdatabase.p.rapidapi.com```
 
 X-RapidAPI-Key: YOUR_API_KEY
 X-RapidAPI-Host: moviesdatabase.p.rapidapi.com
