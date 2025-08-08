@@ -53,17 +53,37 @@ The **MoviesDatabase API** provides complete and up-to-date information for over
 ## Request and Response Format
 
 **Example Request:**
-```http
+http
 GET /titles?limit=5&year=2023&genre=Action HTTP/1.1
-Host: moviesdatabase.p.rapidapi.com ```
+Host: moviesdatabase.p.rapidapi.com
 
 ---
 
 ## Authentication
 - The API uses API Key authentication via RapidAPI.
 - Include the following headers in every request:
- ```X-RapidAPI-Key: YOUR_API_KEY
--X-RapidAPI-Host: moviesdatabase.p.rapidapi.com```
-
 X-RapidAPI-Key: YOUR_API_KEY
-X-RapidAPI-Host: moviesdatabase.p.rapidapi.com
+X-RapidAPI-Host: moviesdatabase.p.rapidapi.com 
+
+# Error Handling
+
+**Common Error Codes:**
+
+| Status Code | Meaning                  | Cause                               |
+|-------------|--------------------------|--------------------------------------|
+| 400         | Bad Request              | Invalid query parameters            |
+| 401         | Unauthorized             | Missing or invalid API key          |
+| 404         | Not Found                | Invalid title or actor ID           |
+| 429         | Too Many Requests        | Exceeded rate limits                |
+| 500         | Internal Server Error    | API service error                   |
+
+---
+
+# Usage Limits and Best Practices
+
+- **Rate Limits:** Defined by your RapidAPI subscription plan. Monitor to avoid `429` errors.  
+- **Pagination:** Use `page` and `limit` for large datasets.  
+- **Filtering:** Use `genre`, `startYear`, `endYear`, and `sort` to refine results.  
+- **info parameter:** Request only the fields you need to optimize performance.  
+- **Caching:** Store frequent query results locally to reduce API calls.  
+- **Exact Matching:** For title searches, set `exact=true` when precision is required.
