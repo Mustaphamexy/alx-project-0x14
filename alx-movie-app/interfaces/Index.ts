@@ -35,3 +35,4 @@ export interface MoviesProps {
   titleText: TitleText
   releaseYear: ReleaseYear
 }
+
